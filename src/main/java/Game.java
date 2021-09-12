@@ -97,6 +97,6 @@ public class Game {
         round.roundFour(expertQuestions);
         round.roundFive(legendaryQuestions);
         round.pointsToMoney(player);
-        System.out.println("El dinero ganado en total es: "+ player.getEarnedMoney()+" Gracias por jugar");
+        System.out.println(player.getPlayerName() +", El dinero ganado en total es: "+ player.getEarnedMoney()+" Gracias por jugar");
     }
 }

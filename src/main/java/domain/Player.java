@@ -3,15 +3,13 @@ package domain;
 public class Player {
     private int playerId;
     private String playerName;
-    private String email;
     private int earnedMoney;
 
     public Player() {
     }
 
-    public Player(String playerName, String email, int earnedMoney) {
+    public Player(String playerName, int earnedMoney) {
         this.playerName = playerName;
-        this.email = email;
         this.earnedMoney = earnedMoney;
     }
 
@@ -29,14 +27,6 @@ public class Player {
 
     public void setPlayerName(String playerName) {
         this.playerName = playerName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public int getEarnedMoney() {
