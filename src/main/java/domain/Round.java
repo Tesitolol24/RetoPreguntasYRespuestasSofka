@@ -75,4 +75,13 @@ public class Round extends Question{
         int randomNumber = (int)(Math.random()*4+0);
         return randomNumber;
     }
+
+    public void nextOrNot(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Tienes: "+ getPoints() +" Puntos");
+        System.out.println("¿Deseas continuar en el juego o deseas retirarte con el monto obtenido, recuerda que si la siguiente pregunta la respondes mal te vas a casa con 0$?");
+        System.out.println("Si deseas continuar marca 1 de lo contrario marca 2");
+
+        setYesOrNot(scanner.nextInt());
+    }
 }
