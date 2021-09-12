@@ -135,6 +135,18 @@ public class Round extends Question{
         }
     }
 
+    public void roundTwo(ArrayList<Question> middleQuestions){
+        roundLogic(middleQuestions);
+    }
+
+    public void roundThree(ArrayList<Question> hardQuestions){
+        roundLogic(hardQuestions);
+    }
+
+    public void roundFour(ArrayList<Question> expertQuestions){
+        roundLogic(expertQuestions);
+    }
+
 }
 
 
