@@ -84,4 +84,19 @@ public class Round extends Question{
 
         setYesOrNot(scanner.nextInt());
     }
+
+    //Metodo para renderizar fin el juego
+    public void gameOver(){
+        System.out.println("Juego terminado");
+    }
+
+    //Metodo para renderizar que ganaste
+    public void winner(){
+        System.out.println("Has ganado un monto de: "+ getPoints()+ " Puntos");
+    }
+
+    //Metodo renderizar salida a voluntad del juego
+    public void retreat(){
+        System.out.println("Bien, se ha llevado un monto de: "+ getPoints()+ " Puntos");
+    }
 }
