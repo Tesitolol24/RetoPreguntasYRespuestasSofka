@@ -101,6 +101,24 @@ public class Round extends Question{
         System.out.println("Bien, se ha llevado un monto de: "+ getPoints()+ " Puntos");
     }
 
+    //Metodo para simplificar la logica de los rounds 1, 2, 3
+    public void roundLogic(ArrayList<Question> arrayList){
+        if(getIsCorrect() == 1 && getYesOrNot() == 1){
+            makeAQuestion(arrayList.get(generateRandomNumber()));
+            if (getIsCorrect() == 1){
+                nextOrNot();
+                if (getIsCorrect() == 1 && getYesOrNot() == 2){
+                    retreat();
+                }
+            }
+        }else {
+            if(getIsCorrect() == 0){
+                gameOver();
+                setIsCorrect(0);
+            }
+        }
+    }
+
     //Round 1
     public void roundOne(ArrayList<Question> easyQuestions){
         makeAQuestion(easyQuestions.get(generateRandomNumber()));
