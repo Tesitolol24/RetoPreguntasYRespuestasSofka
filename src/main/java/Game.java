@@ -86,8 +86,6 @@ public class Game {
         System.out.println("");
         System.out.println("Ingresa tu nombre completo");
         player.setPlayerName(scanner.nextLine());
-        System.out.println("Ingresa tu email");
-        player.setEmail(scanner.nextLine());
         System.out.println("");
         System.out.println("Puntos actuales"+round.getPoints());
 
