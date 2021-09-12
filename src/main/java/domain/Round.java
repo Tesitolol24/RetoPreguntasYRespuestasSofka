@@ -52,9 +52,21 @@ public class Round extends Question{
         if(question.getPlayerAnswer().equals(question.getCorrectAnswer())){
             System.out.println("Es Correcto");
             setIsCorrect(1);
+            increasePoints();
         } else {
             System.out.println("Es Incorrecto");
             setIsCorrect(0);
         }
+    }
+
+    public void increasePoints(){
+        int accumulated = getPoints();
+        accumulated += 5;
+        setPoints(accumulated);
+        pointsToZero();
+    }
+
+    public void pointsToZero(){
+        setPoints(0);
     }
 }
