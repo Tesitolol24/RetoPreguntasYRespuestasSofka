@@ -1,5 +1,6 @@
 package domain;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Round extends Question{
@@ -99,4 +100,23 @@ public class Round extends Question{
     public void retreat(){
         System.out.println("Bien, se ha llevado un monto de: "+ getPoints()+ " Puntos");
     }
+
+    //Round 1
+    public void roundOne(ArrayList<Question> easyQuestions){
+        makeAQuestion(easyQuestions.get(generateRandomNumber()));
+        if (getIsCorrect() == 1){
+            nextOrNot();
+            if(getIsCorrect() == 1 && getYesOrNot() == 2){
+                retreat();
+            }
+        }else {
+            if(getIsCorrect() == 0){
+                setIsCorrect(0);
+                gameOver();
+            }
+        }
+    }
+
 }
+
+
