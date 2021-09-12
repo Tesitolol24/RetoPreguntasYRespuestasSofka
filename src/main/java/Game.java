@@ -1,6 +1,9 @@
+import domain.Player;
 import domain.Question;
+import domain.Round;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Game {
     public static void main(String[] args) {
@@ -71,5 +74,29 @@ public class Game {
         legendaryQuestions.add(2, question23);
         legendaryQuestions.add(3, question24);
         legendaryQuestions.add(4, question25);
+
+        //Creacion de objetos
+        Scanner scanner = new Scanner(System.in);
+        Player player = new Player();
+        Round round = new Round();
+
+        System.out.println("_----- Bienvenid@ a RPR-GAME-----_");
+        System.out.println("El juego consta en una serie de preguntas, en las cuales si constestas de manera acertada ganaras dinero.");
+        System.out.println("Si respondes de manera correcta puedes retirarte con tu monto pero si fallas te iras a casa con las manos vacias");
+        System.out.println("");
+        System.out.println("Ingresa tu nombre completo");
+        player.setPlayerName(scanner.nextLine());
+        System.out.println("Ingresa tu email");
+        player.setEmail(scanner.nextLine());
+        System.out.println("");
+        System.out.println("Puntos actuales"+round.getPoints());
+
+        round.roundOne(easyQuestions);
+        round.roundTwo(middleQuestions);
+        round.roundThree(hardQuestions);
+        round.roundFour(expertQuestions);
+        round.roundFive(legendaryQuestions);
+        round.pointsToMoney(player);
+        System.out.println("El dinero ganado en total es: "+ player.getEarnedMoney()+" Gracias por jugar");
     }
 }
