@@ -86,6 +86,13 @@ public class Round extends Question{
         setYesOrNot(scanner.nextInt());
     }
 
+    //Seleccionar los puntos ganados y transformarlos en dinero
+    public void pointsToMoney(Player player){
+        int money;
+        money = getPoints() * 200000;
+        player.setEarnedMoney(money);
+    }
+
     //Metodo para renderizar fin el juego
     public void gameOver(){
         System.out.println("Juego terminado");
