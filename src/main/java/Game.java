@@ -1,5 +1,7 @@
 import domain.Question;
 
+import java.util.ArrayList;
+
 public class Game {
     public static void main(String[] args) {
         //25 instancias de la clase Question / generar preguntas
@@ -34,5 +36,40 @@ public class Game {
         Question question24 = new Question(24, "¿En que año dio su inicio la santa inquisicion?", "Historia", "a", "A. 1478", "B. 1520", "C. 1462", "D. 1476");
         Question question25 = new Question(25, "¿Que obra teatral inica con esta frase: 'Cual gritan esos malditos pero mal rayo me parta si concluyendo esta carta no pagan caros sus gritos'?" , "Obra Teatral", "b", "A. Hamlet", "B. Don Juan Tenorio", "C. La celestina", "D. Edipo Rey");
 
+        //Asignar por arreglo cada pregunta segun su categoria, facil/medio/dificil/experto/legendario
+        ArrayList<Question> easyQuestions = new ArrayList<Question>();
+        easyQuestions.add(0, question1);
+        easyQuestions.add(1, question2);
+        easyQuestions.add(2, question3);
+        easyQuestions.add(3, question4);
+        easyQuestions.add(4, question5);
+
+        ArrayList<Question> middleQuestions = new ArrayList<Question>();
+        middleQuestions.add(0, question6);
+        middleQuestions.add(1, question7);
+        middleQuestions.add(2, question8);
+        middleQuestions.add(3, question9);
+        middleQuestions.add(4, question10);
+
+        ArrayList<Question> hardQuestions = new ArrayList<Question>();
+        hardQuestions.add(0, question11);
+        hardQuestions.add(1, question12);
+        hardQuestions.add(2, question13);
+        hardQuestions.add(3, question14);
+        hardQuestions.add(4, question15);
+
+        ArrayList<Question> expertQuestions = new ArrayList<Question>();
+        expertQuestions.add(0, question16);
+        expertQuestions.add(1, question17);
+        expertQuestions.add(2, question18);
+        expertQuestions.add(3, question19);
+        expertQuestions.add(4, question20);
+
+        ArrayList<Question> legendaryQuestions = new ArrayList<Question>();
+        legendaryQuestions.add(0, question21);
+        legendaryQuestions.add(1, question22);
+        legendaryQuestions.add(2, question23);
+        legendaryQuestions.add(3, question24);
+        legendaryQuestions.add(4, question25);
     }
 }
