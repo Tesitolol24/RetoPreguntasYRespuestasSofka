@@ -147,6 +147,20 @@ public class Round extends Question{
         roundLogic(expertQuestions);
     }
 
+    //Round 5
+    public void roundFive (ArrayList<Question> legendaryQuestions){
+        if(getIsCorrect() == 1 && getYesOrNot() == 1){
+            makeAQuestion(legendaryQuestions.get(generateRandomNumber()));
+            if (getIsCorrect() == 1){
+                winner();
+            }
+        }else {
+            if (getIsCorrect() == 0) {
+                setIsCorrect(0);
+                gameOver();
+            }
+        }
+    }
 }
 
 
