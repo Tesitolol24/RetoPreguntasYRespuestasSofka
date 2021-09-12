@@ -69,4 +69,10 @@ public class Round extends Question{
     public void pointsToZero(){
         setPoints(0);
     }
+
+    //Metodo para generar un numero aleatorio
+    public int generateRandomNumber(){
+        int randomNumber = (int)(Math.random()*4+0);
+        return randomNumber;
+    }
 }
